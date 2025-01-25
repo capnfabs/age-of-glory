@@ -51,10 +51,10 @@ fn render_taskbar(
 }
 
 fn main() {
-    let bkg_png = include_bytes!("../res/bkg.png");
-    let taskbar_left_bytes = include_bytes!("../res/taskbar-left.png");
-    let taskbar_mid_bytes = include_bytes!("../res/taskbar-mid.png");
-    let taskbar_right_bytes = include_bytes!("../res/taskbar-right.png");
+    let bkg_png = include_bytes!("../../res/bkg.png");
+    let taskbar_left_bytes = include_bytes!("../../res/taskbar-left.png");
+    let taskbar_mid_bytes = include_bytes!("../../res/taskbar-mid.png");
+    let taskbar_right_bytes = include_bytes!("../../res/taskbar-right.png");
     // relative to taskbar_right's origin
     let clock_offset = (71, 22);
 

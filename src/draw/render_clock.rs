@@ -12,7 +12,7 @@ pub fn render_text(photon_img: &PhotonImage, x: u32, y: u32, text: &str) -> Phot
     // - it's crucial that we use a bitmap font for this, or to make it look convincingly like a
     //   bitmap by rendering at a lower DPI without antialiasing / hinting whatever
     // - I should probalby take a pass through and ensure I understand what all this code is doing.
-    let font = Vec::from(include_bytes!("../res/ms-sans-serif.ttf") as &[u8]);
+    let font = Vec::from(include_bytes!("../../res/ms-sans-serif.ttf") as &[u8]);
     let font = Font::try_from_bytes(&font).unwrap();
     let height = 26f32;
     let scale = Scale {
