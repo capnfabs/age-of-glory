@@ -1,33 +1,14 @@
 ## Status
 
-I have the code embedding the images 'working', and it includes the metadata, but they're not being interpreted by the OS correctly. It's hard to know what the problem is. Ideas:
-- maybe I can read the OS logs to figure it out? (nope)
-- behavior is: it sets the desktop to the primary image, and then crashes.
-- maybe I can compare the output of my code against the HEIC reference?
-- maybe I can find some other program to create HEICs?
-- maybe i can fork that preexisting software and do it in Xcode?
-- there's a comment on this video saying that "time" mode doesn't work?
-  - https://www.youtube.com/watch?v=irHQrbzpUyc
-  - https://github.com/mczachurski/wallpapper
-  - ahhh but actually, this works in Equinox? I should probably check minute resolution though.
-
-So next steps are:
-- Derisk using Equinox (try setting 12, 1, 1:01, 1:02, 1:03, 1:04...)
-  - WORKS
-- Use Wallpapper
-  - WORKS but I have to fuck around with the timezones
-  - Ok I shouldn't have fucked with the timezones this much.
-
 IT WORKS
 
 ## Plan
 
 - [scope/done] Start by generating wallpaper for the clock. Not perfect but good enough
-- [scope] Then make a dynamic wallpaper file manually for... 1440 screenshots and assess the damage
-  - Do this with a hacked up version of Equinox.
+- [scope/done] Then make a dynamic wallpaper file manually for... 1440 screenshots and assess the damage
+  - Do this with wallpapper
 - [build] Then make the wallpaper perfect
-- [scope / decided against] Then consider building the website to make it possible to generate and download for all resolutions... but actually I can probably just run it for a bunch of screen resolutions? Don't need to host infra anywhere.
-  - I think this is going to be impossible because the code which compresses the HEIF is too slow (takes about ~0.5s per image in release mode on my mac, can't multithread it easily)
+- [build] Run it for a bunch of screen resolutions? Don't need to host infra anywhere.
 - [??] A windows XP one would be sickkk too
 
 
@@ -82,3 +63,10 @@ Introducing: [download a taskbar] for OSX.
 ## File formats
 - This is an HEIC file, containing an XMP file, containing an RDP file, containing a base64-encoded plist.
 - XMP is amazing because the [spec](https://github.com/adobe/XMP-Toolkit-SDK/blob/main/docs/XMPSpecificationPart1.pdf) has this cursed bit (page 10/11) so that software that doesn't know about XMP can still (a) detect and read the XMP (b) sometimes write the XMP??? Incredible stuff.
+
+
+## Here's how I did it:
+- Spent two days tearing out my hair because my custom Rust code to assemble the image didn't work
+- I could produce an image that _seemed_ appropriate when I compared it to dynamic wallpapers from other solutions, but it just didn't work, OSX logs didn't given any info, thumbnail didn't show on wallpapers tab
+- Then eventually just googled for command line apps which can do it
+- (I would like to remind y'all that I'm very good at my job and still have this failure mode)

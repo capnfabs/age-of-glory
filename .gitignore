@@ -1,6 +1,7 @@
 /target
 
-# test file
+# test files
 /manipulated_image.jpg
 /output
-/output.heif
+/output.heic
+/output_wallpapper.heic
