@@ -71,8 +71,8 @@ fn main() {
     let taskbar_top = bkg_img.get_height() - taskbar_left.get_height();
     let taskbar_right_start = bkg_img.get_width() - taskbar_right.get_width();
 
-    (0..=23).into_par_iter().for_each(|hour| {
-        for min in 0..=59 {
+    (0..24).into_par_iter().for_each(|hour| {
+        for min in 0..60 {
             let am_or_pm = if hour < 12 {
                 "AM"
             } else {
