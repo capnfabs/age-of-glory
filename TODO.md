@@ -7,7 +7,9 @@ IT WORKS
 - [scope/done] Start by generating wallpaper for the clock. Not perfect but good enough
 - [scope/done] Then make a dynamic wallpaper file manually for... 1440 screenshots and assess the damage
   - Do this with wallpapper
-- [build] Then make the wallpaper perfect
+- [build/done] Then make the wallpaper perfect
+- Build the generator into a command line application
+- Build it into a command line application with clap
 - [build] Run it for a bunch of screen resolutions? Don't need to host infra anywhere.
 - [??] A windows XP one would be sickkk too
 
@@ -70,3 +72,5 @@ Introducing: [download a taskbar] for OSX.
 - I could produce an image that _seemed_ appropriate when I compared it to dynamic wallpapers from other solutions, but it just didn't work, OSX logs didn't given any info, thumbnail didn't show on wallpapers tab
 - Then eventually just googled for command line apps which can do it
 - (I would like to remind y'all that I'm very good at my job and still have this failure mode)
+
+- https://dosbox-x.com/wiki/Guide%3AInstalling-Windows-98

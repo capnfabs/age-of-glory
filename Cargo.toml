@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 chrono = "0.4.39"
+clap = { version = "4.5.27", features = ["derive"] }
 # Copied from photon-rs so that it can still work with wasm if we need it to
 image = { version = "0.23.4", default-features = false, features = [
   "gif",
@@ -23,6 +24,7 @@ image = { version = "0.23.4", default-features = false, features = [
 ] }
 # Copied from photon-rs
 imageproc = { version = "0.22.0", default-features = false }
+itertools = "0.14.0"
 lazy_static = "1.5.0"
 photon-rs = {version = "0.3.2", default-features = false}
 rayon = "1.10.0"
