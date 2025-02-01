@@ -100,8 +100,10 @@ fn render_taskbar_clock(mut img: &mut PhotonImage, clock_pos: (u32, u32), hour: 
     assert!(hour < 24);
     assert!(min < 60);
 
+    // lol this is sooooooo cursed
+    // TODO: replace with string conversion
     let pm  = (hour / 12) != 0;
-    let two_digit_hour = (hour % 12) == 0 || (hour % 12) == 11;
+    let two_digit_hour = (hour % 12) == 0 || (hour % 12) == 11 || (hour % 12) == 10;
 
     let mut x_pos = clock_pos.0;
     let y_pos = clock_pos.1;
