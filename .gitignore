@@ -1,6 +1,7 @@
 /target
 
 # test files
+/single.png
 /manipulated_image.jpg
 /output
 /output.heic

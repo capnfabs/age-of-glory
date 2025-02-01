@@ -27,6 +27,7 @@ dependencies = [
  "chrono",
  "image",
  "imageproc",
+ "lazy_static",
  "photon-rs",
  "rayon",
  "rusttype",
