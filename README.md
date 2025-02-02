@@ -15,10 +15,8 @@ brew install wallpapper
 
 ```sh
 cd [this directory]
-# draw 1440 backgrounds, takes about 30 seconds (multithreaded)
-cargo run --release --bin draw
-# takes <1 sec, make JSON listing
-cargo run --release --bin makelisting
+# draw 1440 backgrounds, takes 30 seconds-10 minutes depending on resolution, it's multithreaded but not super optimized
+cargo run --release --bin draw -- --source res/bkg-2880x1864.png output-2880x1864 batch
 # will chomp all your RAM and all your swap
-wallpapper -i output/listing.json -o output_wallpapper.heic
+wallpapper -i output-2880x1864/listing.json -o output_complete_2880x1864.heic
 ```

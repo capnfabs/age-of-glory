@@ -8,10 +8,20 @@ IT WORKS
 - [scope/done] Then make a dynamic wallpaper file manually for... 1440 screenshots and assess the damage
   - Do this with wallpapper
 - [build/done] Then make the wallpaper perfect
-- Build the generator into a command line application
-- Build it into a command line application with clap
-- [build] Run it for a bunch of screen resolutions? Don't need to host infra anywhere.
+- [build/done] Build the generator into a command line application
+- [build/done] Build it into a command line application with clap
+- [build/done] Run it for a bunch of screen resolutions? Don't need to host infra anywhere.
 - [??] A windows XP one would be sickkk too
+
+
+### Devices to target:
+- 13” air 2560-by-1664 = 1.53846154
+- 15” air 2880-by-1864 = 1.54506438
+- 14” pro 3024-by-1964 = 1.53971487
+- 16” pro 3456-by-2234 = 1.5470009
+- my big display -> 3840x2160 (16:9)
+- iMac 4480-by-2520 = 1.77777778 (16:9) (gave up on this, doesn't work somehow)
+- 16:10 -> covers older models (2560x1600)
 
 
 ## Final product ideas:
@@ -42,25 +52,6 @@ Something that automatically detects your resolution and basically lets you "dow
 > Microsoft Sans Serif font is a very legible User Interface (UI) font. It was designed to be metrically compatible with the MS Sans bitmap font that shipped in early versions of Microsoft Windows.
 
 from https://learn.microsoft.com/de-de/typography/font-list/microsoft-sans-serif
-
-## Blog post
-
-Are you a macOS user? Do you enjoy the incredible battery life, and the elegant user experience (link to upside down mouse)? And yet, do you ever stare at your empty desktop in the morning, and think... wow, I wish I just had a little bit more inspiration? A little bit more motivation? A bit more enthusiasm?
-
-Thinking, "I wish i just knew where to start"?
-
-Introducing: [download a taskbar] for OSX.
-
-- Figure out most common resolutions
-- Precompute a bunch of options
-- Add JS for detecting screen dimensions
-
-# Steps:
-1. Download a taskbar
-2. Walk through settings
-3. blah blah blah
-4. You can also customize your experience by downloading the `taskbar` app
-
 
 ## File formats
 - This is an HEIC file, containing an XMP file, containing an RDP file, containing a base64-encoded plist.

@@ -1,4 +1,5 @@
 mod render_taskbar;
+mod make_listing;
 
 use std::path::PathBuf;
 
@@ -49,6 +50,8 @@ fn render_batch(base_img: &PhotonImage, output_directory: &std::path::Path) {
             save_image(new_img, &filename).expect("Save failed");
         }
     });
+    let listing_path = output_directory.join("listing.json");
+    make_listing::write_listing(listing_path.to_str().expect("Unicode something something"));
 }
 
 fn main() {
